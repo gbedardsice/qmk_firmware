@@ -22,15 +22,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_ONE] = LAYOUT(
-    RESET,   BL_STEP, KC_STOP,
-    _______, KC_HOME, RGB_MOD,
-    KC_MPRV, KC_END , KC_MNXT
+    RESET,   BL_STEP,  KC_STOP,
+    _______, RGB_VAI,  RGB_MOD,
+    MO(2),   RGB_VAD , KC_MNXT
 ),
 
 [_TWO] = LAYOUT(
-    _______, _______, _______,
-    _______, _______, _______,
-    _______, _______, _______
+    _______, RGB_M_P, _______,
+    _______, RGB_HUI, RGB_SAI,
+    _______, RGB_HUD, RGB_SAD
 ),
 
 [_THREE] = LAYOUT(
@@ -63,8 +63,4 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             tap_code(KC_PGUP);
         }
     }
-}
-
-void rgb_matrix_indicators_user(void) {
-    rgb_matrix_set_color_all(255,255,255);
 }
