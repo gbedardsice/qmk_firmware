@@ -51,9 +51,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     }
     else if (index == _MIDDLE) {
         if (clockwise) {
-            tap_code16(C(KC_RIGHT));
+            tap_code16(G(S(KC_Z)));
         } else {
-            tap_code16(C(KC_LEFT));
+            tap_code16(G(KC_Z));
         }
     }
     else if (index == _RIGHT) {
